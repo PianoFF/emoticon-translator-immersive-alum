@@ -71,6 +71,8 @@ def get_japanese_emoticon(path,emo)
   full_hash[:get_emoticon][emo] ? full_hash[:get_emoticon][emo] : "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(path, jav_emo)
   # code goes here
+  full_hash = load_library(path)
+  full_hash[:get_meaning][jav_emo] ?  full_hash[:get_meaning][jav_emo] : "Sorry, that emoticon was not found"
 end
