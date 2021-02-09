@@ -34,10 +34,41 @@ def load_library(yml_file)
   end
   translated_hash
   # binding.pry
+#   translated_hash = > {:get_meaning=>
+#   {"☜(⌒▽⌒)☞"=>"angel",
+#    "ヽ(ｏ`皿′ｏ)ﾉ"=>"angry",
+#    "(ΘεΘ;)"=>"bored",
+#    "(゜.゜)"=>"confused",
+#    "(#^.^#)"=>"embarrased",
+#    ">゜))))彡"=>"fish",
+#    "(^0_0^)"=>"glasses",
+#    "(￣ー￣)"=>"grinning",
+#    "(＾ｖ＾)"=>"happy",
+#    "(*^3^)/~☆"=>"kiss",
+#    "(Ｔ▽Ｔ)"=>"sad",
+#    "o_O"=>"surprised",
+#    "(^_-)"=>"wink"},
+#  :get_emoticon=>
+#   {"O:)"=>"☜(⌒▽⌒)☞",
+#    ">:("=>"ヽ(ｏ`皿′ｏ)ﾉ",
+#    ":O"=>"(ΘεΘ;)",
+#    "%)"=>"(゜.゜)",
+#    ":$"=>"(#^.^#)",
+#    "><>"=>">゜))))彡",
+#    "8D"=>"(^0_0^)",
+#    "=D"=>"(￣ー￣)",
+#    ":)"=>"(＾ｖ＾)",
+#    ":*"=>"(*^3^)/~☆",
+#    ":'("=>"(Ｔ▽Ｔ)",
+#    ":o"=>"o_O",
+#    ";)"=>"(^_-)"}}
+
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path,emo)
   # code goes here
+  full_hash = load_library(path)
+  full_hash[:get_emoticon][emo] ? full_hash[:get_emoticon][emo] : "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning
